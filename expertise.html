@@ -34,15 +34,25 @@
     <!-- Custom Background Style for Design Studio -->
     <style>
         body.design-studio {
-            background-image: url('AssetsConst/Bg noir.png');
+            position: relative;
+        }
+        
+        .global-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background-image: url('AssetsConst/Bgnoir.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            transform: translateZ(0);
+            will-change: transform;
+            pointer-events: none;
         }
         
         .loader-wrap .load-text {
-            background-image: url('AssetsConst/Bg noir.png');
+            background-image: url('AssetsConst/Bgnoir.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -72,11 +82,29 @@
         .serv-style4 .item:first-of-type {
             padding-top: 30px !important;
         }
+        
+        @media (max-width: 768px) {
+            .loader-wrap .load-text {
+                background-attachment: scroll !important;
+                background-position: center !important;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+            }
+            
+            .global-bg {
+                background-attachment: scroll !important;
+                background-position: center !important;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+            }
+        }
     </style>
 
 </head>
 
 <body class="design-studio">
+
+    <div class="global-bg"></div>
 
 
 
