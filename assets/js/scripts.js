@@ -63,11 +63,11 @@ $(function () {
             }
         }
 
-        if (isLight()) {
+        if (isLight() && !document.body.classList.contains("design-studio")) {
             toggleRootClass();
         }
 
-        document.querySelector(".theme-icon").addEventListener("click", () => {
+        document.querySelector(".theme-icon")?.addEventListener("click", () => {
             toggleLocalStorageItem();
             toggleRootClass();
         });
