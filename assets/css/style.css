@@ -10573,7 +10573,8 @@ footer .subscribe p a {
 }
 
 .features .stack-title h2 {
-  font-size: 15vw;
+  font-size: min(11vw, 7.5rem);
+  line-height: 1;
 }
 .features .item {
   padding: 40px 30px;
