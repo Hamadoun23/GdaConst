@@ -1,106 +1,31 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="fr">
 
 <head>
-
-    <!-- Metas -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="GDA Construction, construction Mali, gros œuvre, génie civil, structures métalliques, béton armé, bassins hydrauliques, BTP Mali, construction durable, ingénierie construction">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDA Construction | BTP et génie civil au Mali</title>
     <meta name="description" content="GDA Construction - Entreprise d'ingénierie et de BTP au Mali spécialisée dans le gros œuvre, les structures métalliques, le béton armé et les ouvrages hydrauliques. Excellence et durabilité.">
+    <meta name="keywords" content="GDA Construction, construction Mali, gros œuvre, génie civil, structures métalliques, béton armé, bassins hydrauliques, BTP Mali, construction durable, ingénierie construction">
     <meta name="author" content="GDA Construction">
+    <meta name="theme-color" content="#161616">
 
-    <!-- Title  -->
-    <title>GDA Construction</title>
+    <link rel="icon" type="image/png" href="AssetsConst/logo/favicon.png">
+    <link rel="apple-touch-icon" href="AssetsConst/logo/favicon.png">
 
-    <!-- favicon icon -->
-    <link rel="shortcut icon" href="AssetsConst/logo/Const fond blanc.jpg">
-    <link rel="apple-touch-icon" href="AssetsConst/logo/Const fond blanc.jpg">
-    <link rel="android-chrome" sizes="192x192" href="AssetsConst/logo/Const fond blanc.jpg">
-    <link rel="favicon" sizes="32x32" href="AssetsConst/logo/Const fond blanc.jpg">
+    <link rel="preload" href="assets/fonts/funnel-display.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="AssetsConst/fond/motif-noir.webp" as="image" type="image/webp">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/site.css">
 
-    <!-- Plugins -->
-    <link rel="stylesheet" href="assets/css/plugins.css">
-
-    <!-- Core Style Css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Custom Background Style for Design Studio -->
-    <style>
-        body.design-studio {
-            position: relative;
-        }
-        
-        .global-bg {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            background-image: url('AssetsConst/Bgnoir.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            transform: translateZ(0);
-            will-change: transform;
-            pointer-events: none;
-        }
-        
-        .loader-wrap .load-text {
-            background-image: url('AssetsConst/Bgnoir.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 200px;
-        }
-        
-        .serv-style4 .item:first-of-type .img {
-            margin-top: -50px !important;
-            transform: translateY(-30px);
-        }
-        
-        .serv-style4 .item:first-of-type .img img {
-            transform: translateY(-30px);
-        }
-        
-        .serv-style4 .item:first-of-type {
-            padding-top: 30px !important;
-        }
-
-        @media (max-width: 768px) {
-            .loader-wrap .load-text {
-                background-attachment: scroll !important;
-                background-position: center top !important;
-                background-size: cover !important;
-                background-repeat: no-repeat !important;
-            }
-            
-            .global-bg {
-                background-position: center !important;
-                background-size: cover !important;
-                background-repeat: no-repeat !important;
-                background-attachment: scroll !important;
-            }
-        }
-
-    </style>
-
+    <script src="assets/js/vendor/gsap.min.js" defer></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="assets/js/vendor/ScrollSmoother.min.js" defer></script>
+    <script src="assets/js/vendor/isotope.pkgd.min.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </head>
 
 <body class="design-studio">
@@ -146,22 +71,12 @@
 
     <!-- ==================== Start progress-scroll-button ==================== -->
 
-    <style>
-        @media (max-width: 767.98px) {
-            .progress-wrap {
-                display: flex !important;
-            }
-        }
-    </style>
 
     <div class="progress-wrap cursor-pointer">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
-
-    <!-- ==================== End progress-scroll-button ==================== -->
-
 
 
     <!-- ==================== Start Navbar ==================== -->
@@ -170,8 +85,8 @@
         <div class="container align-items-center">
 
             <!-- Logo -->
-            <a class="logo w-200px" href="#">
-                <img src="AssetsConst/logo/GDA CONST.png" alt="logo">
+            <a class="logo w-200px" href="index.html">
+                <img src="AssetsConst/logo/gda-construction.webp" alt="GDA Construction">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -211,7 +126,6 @@
         <div id="smooth-content">
 
             <main class="o-hidden">
-
 
 
                 <!-- ==================== Start Header ==================== -->
@@ -268,21 +182,21 @@
                                         <div class="snap-slide">
                                             <div class="main-img" data-overlay-dark="5">
                                                 <div class="img">
-                                                    <img src="AssetsConst/accueil/GO6.jpg" alt="">
+                                                    <img fetchpriority="high" src="AssetsConst/accueil/coffrage-etaiement.webp" srcset="AssetsConst/accueil/coffrage-etaiement-800.webp 800w, AssetsConst/accueil/coffrage-etaiement.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Équipe GDA posant l'étaiement d'un coffrage">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="snap-slide">
                                             <div class="main-img" data-overlay-dark="5">
                                                 <div class="img">
-                                                    <img src="AssetsConst/accueil/S3.jpg" alt="">
+                                                    <img loading="lazy" decoding="async" src="AssetsConst/realisation/montage-charpente-grue.webp" srcset="AssetsConst/realisation/montage-charpente-grue-800.webp 800w, AssetsConst/realisation/montage-charpente-grue.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Montage d'une charpente métallique à la grue">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="snap-slide">
                                             <div class="main-img" data-overlay-dark="5">
                                                 <div class="img">
-                                                    <img src="AssetsConst/accueil/BA4.jpg" alt="">
+                                                    <img loading="lazy" decoding="async" src="AssetsConst/expertises/coulage-beton-fondation.webp" srcset="AssetsConst/expertises/coulage-beton-fondation-800.webp 800w, AssetsConst/expertises/coulage-beton-fondation.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Coulage de béton en fondation par les équipes GDA">
                                                 </div>
                                             </div>
                                         </div>
@@ -294,17 +208,17 @@
                                     <div class="snap-slider-thumbs-wrapper">
                                         <div class="thumb-slide">
                                             <div class="thumb-slide-img fit-img">
-                                                <img src="AssetsConst/accueil/MGO1.jpeg" alt="">
+                                                <img loading="lazy" decoding="async" src="AssetsConst/accueil/ferraillage-voile.webp" srcset="AssetsConst/accueil/ferraillage-voile-800.webp 800w, AssetsConst/accueil/ferraillage-voile.webp 1920w" sizes="(max-width: 991px) 180px, 25vw" alt="Ferraillage d'un voile en béton armé">
                                             </div>
                                         </div>
                                         <div class="thumb-slide">
                                             <div class="thumb-slide-img fit-img">
-                                                <img src="AssetsConst/accueil/MS1.jpg" alt="">
+                                                <img loading="lazy" decoding="async" src="AssetsConst/accueil/soudure-charpente.webp" srcset="AssetsConst/accueil/soudure-charpente-800.webp 800w, AssetsConst/accueil/soudure-charpente.webp 1920w" sizes="(max-width: 991px) 180px, 25vw" alt="Soudure d'éléments de charpente">
                                             </div>
                                         </div>
                                         <div class="thumb-slide">
                                             <div class="thumb-slide-img fit-img">
-                                                <img src="AssetsConst/accueil/MBA2.jpg" alt="">
+                                                <img loading="lazy" decoding="async" src="AssetsConst/accueil/beton-gros-plan.webp" srcset="AssetsConst/accueil/beton-gros-plan-800.webp 800w, AssetsConst/accueil/beton-gros-plan.webp 1400w" sizes="(max-width: 991px) 180px, 25vw" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -313,9 +227,6 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- ==================== End Header ==================== -->
-
 
 
                 <!-- ==================== Start Section ==================== -->
@@ -509,9 +420,6 @@
                     </div>
                 </div>
 
-                <!-- ==================== End Section ==================== -->
-
-
 
                 <!-- ==================== Start intro ==================== -->
 
@@ -561,34 +469,31 @@
                         </div>
                         <div class="row sm-marg mt-50px">
                             <div class="col-lg-3 col-md-6" data-ui-animate data-delay="0.3">
-                                <div class="item-numb bg-light text-align-center mt-30px" style="color: #FF6A3A !important;">
-                                    <h2 class="fs-60 fw-300 mb-15px" style="color: #FF6A3A !important; font-weight: 700 !important;">98<span class="fs-30">%</span></h2>
-                                    <span style="color: #FF6A3A !important; font-weight: 700;">Clients satisfaits</span>
+                                <div class="u-color-orange item-numb bg-light text-align-center mt-30px">
+                                    <h2 class="u-color-orange u-fw-700 fs-60 fw-300 mb-15px">98<span class="fs-30">%</span></h2>
+                                    <span class="u-color-orange u-fw-700">Clients satisfaits</span>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6" data-ui-animate data-delay="0.4">
                                 <div class="item-numb mt-30px d-flex align-items-center justify-content-center">
-                                    <img src="AssetsConst/icones/CASQUE.png" alt="" class="w-100px" style="transform: scale(2); transform-origin: center;">
+                                    <img src="AssetsConst/icones/casque.webp" alt="" class="u-icon-x2 w-100px">
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6" data-ui-animate data-delay="0.5">
-                                <div class="item-numb main-colorbg bg-light text-align-center mt-30px" style="color: #ffffff !important;">
-                                    <h2 class="fs-60 fw-300 mb-15px" style="color: #ffffff !important; font-weight: 700 !important;"><strong>+10</strong></h2>
-                                    <span style="color: #ffffff !important; font-weight: 700;"><strong>ans d'expériences</strong></span>
+                                <div class="u-color-white item-numb main-colorbg bg-light text-align-center mt-30px">
+                                    <h2 class="u-color-white u-fw-700 fs-60 fw-300 mb-15px"><strong>+10</strong></h2>
+                                    <span class="u-color-white u-fw-700"><strong>ans d'expériences</strong></span>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6" data-ui-animate data-delay="0.6">
                                 <div class="item-numb bord text-align-center mt-30px">
-                                    <h2 class="fs-60 fw-300 mb-15px" style="font-weight: 700 !important;"><strong>+35</strong></h2>
-                                    <span style="font-weight: 700;"><strong>Experts sur le terrain</strong></span>
+                                    <h2 class="u-fw-700 fs-60 fw-300 mb-15px"><strong>+35</strong></h2>
+                                    <span class="u-fw-700"><strong>Experts sur le terrain</strong></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
-                <!-- ==================== End intro ==================== -->
-
 
 
                 <!-- ==================== Start Services ==================== -->
@@ -633,7 +538,7 @@
                     data-direction="left">
                                 <div class="item v-align-between">
                                     <div class="img">
-                                        <img src="AssetsConst/icones/CASQUE.png" alt="">
+                                        <img src="AssetsConst/icones/casque.webp" alt="">
                                     </div>
                                     <div>
                                         <h4 class="mb-30px">Gros Œuvre & Génie Civil</h4>
@@ -663,7 +568,7 @@
                 >
                                 <div class="item v-align-between bg-light">
                                     <div class="img">
-                                        <img src="AssetsConst/icones/GRUE.png" alt="">
+                                        <img src="AssetsConst/icones/grue.webp" alt="">
                                     </div>
                                     <div>
                                         <h4 class="mb-30px">Structures Métalliques & Ossatures Acier</h4>
@@ -693,7 +598,7 @@
                     data-direction="right">
                                 <div class="item v-align-between">
                                     <div class="img">
-                                        <img src="AssetsConst/icones/TANK1.png" alt="">
+                                        <img src="AssetsConst/icones/reservoir.webp" alt="">
                                     </div>
                                     <div>
                                         <h4 class="mb-30px">Ouvrages Hydrauliques & Bassins de Rétention</h4>
@@ -722,9 +627,6 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- ==================== End Services ==================== -->
-
 
 
                 <!-- ==================== Start Section ==================== -->
@@ -818,9 +720,6 @@
                     </div>
                 </div>
 
-                <!-- ==================== End Section ==================== -->
-
-
 
                 <!-- ==================== Start Portfolio ==================== -->
 
@@ -836,7 +735,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/immb1.jpg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/coulage-beton-toupie.webp" srcset="AssetsConst/realisation/coulage-beton-toupie-800.webp 800w, AssetsConst/realisation/coulage-beton-toupie.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Coulage du béton depuis un camion toupie sur un ferraillage" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -849,7 +748,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/SM1.jpg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/structure-metallique-grande-portee.webp" srcset="AssetsConst/realisation/structure-metallique-grande-portee-800.webp 800w, AssetsConst/realisation/structure-metallique-grande-portee.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Structure métallique en cours de montage" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -862,7 +761,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/bassin1.jpg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/coffrage-bassin.webp" srcset="AssetsConst/realisation/coffrage-bassin-800.webp 800w, AssetsConst/realisation/coffrage-bassin.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Coffrage et étaiement d'un bassin en béton" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -875,7 +774,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/geni1.jpg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/ferraillage-radier.webp" srcset="AssetsConst/realisation/ferraillage-radier-800.webp 800w, AssetsConst/realisation/ferraillage-radier.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Technicien GDA contrôlant un ferraillage" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -888,26 +787,26 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/accueil/villa1.jpeg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/batiment-livre-angle.webp" srcset="AssetsConst/realisation/batiment-livre-angle-800.webp 800w, AssetsConst/realisation/batiment-livre-angle.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Bâtiment à charpente métallique livré" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
                                         <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
-                                                class="ml-15px mr-10px">.</span><span>Villa</span></div>
-                                        <h5>Villa Moderne</h5>
+                                                class="ml-15px mr-10px">.</span><span>Bâtiment</span></div>
+                                        <h5>Bâtiment à charpente métallique livré</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/SM2.jpg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/coulage-massifs.webp" srcset="AssetsConst/realisation/coulage-massifs-800.webp 800w, AssetsConst/realisation/coulage-massifs.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Équipe GDA coulant des massifs de fondation" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
                                         <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
-                                                class="ml-15px mr-10px">.</span><span>Civil</span></div>
-                                        <h5>Gros œuvre et finitions haut standing</h5>
+                                                class="ml-15px mr-10px">.</span><span>Fondations</span></div>
+                                        <h5>Fondations et gros œuvre</h5>
                                     </div>
                                 </div>
                             </div>
@@ -942,9 +841,6 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- ==================== End Portfolio ==================== -->
-
 
 
                 <!-- ==================== Start Section ==================== -->
@@ -994,7 +890,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="award-reveal-img bg-img" data-background="AssetsConst/accueil/BA3.jpeg"></div>
+                                    <div class="award-reveal-img bg-img" data-background="AssetsConst/accueil/ingenieur-genie-civil.webp"></div>
                                 </div>
                                 <div
                                     class="item-row hover-reveal-item pt-40px pb-40px border-color-transparent-white-light line-bottom position-relative">
@@ -1012,7 +908,7 @@
                                         <div class="col-lg-3">
                                         </div>
                                     </div>
-                                    <div class="award-reveal-img bg-img" data-background="AssetsConst/accueil/ETQ3.jpg"></div>
+                                    <div class="award-reveal-img bg-img" data-background="AssetsConst/accueil/expert-technique-qualite.webp"></div>
                                 </div>
                                 <div
                                     class="item-row hover-reveal-item pt-40px pb-40px border-color-transparent-white-light line-bottom position-relative">
@@ -1030,7 +926,7 @@
                                         <div class="col-lg-3">
                                         </div>
                                     </div>
-                                    <div class="award-reveal-img bg-img" data-background="AssetsConst/accueil/IG3.jpg"></div>
+                                    <div class="award-reveal-img bg-img" data-background="AssetsConst/accueil/architecte-chef-projet.webp"></div>
                                 </div>
                                 <div
                                     class="item-row hover-reveal-item pt-40px pb-40px border-color-transparent-white-light line-bottom position-relative">
@@ -1048,7 +944,7 @@
                                         <div class="col-lg-3">
                                         </div>
                                     </div>
-                                    <div class="award-reveal-img bg-img" data-background="AssetsConst/accueil/CCG1.jpg"></div>
+                                    <div class="award-reveal-img bg-img" data-background="AssetsConst/accueil/chef-chantier-gros-oeuvre.webp"></div>
                                 </div>
                                 <div
                                     class="item-row hover-reveal-item pt-40px pb-40px border-color-transparent-white-light line-bottom position-relative">
@@ -1066,15 +962,12 @@
                                         <div class="col-lg-3">
                                         </div>
                                     </div>
-                                    <div class="award-reveal-img bg-img" data-background="AssetsConst/accueil/ISM2.jpg"></div>
+                                    <div class="award-reveal-img bg-img" data-background="AssetsConst/accueil/ingenieur-structure-metallique.webp"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
-                <!-- ==================== End Section ==================== -->
-
 
 
                 <!-- ==================== Start Numbers ==================== -->
@@ -1083,36 +976,15 @@
                 <div class="container-xxl" data-ui-animate data-delay="0.2">
                     <div class="o-hidden border-radius-100px h-700px">
                         <div class="bg-img background-position-center h-800px"
-                            data-background="AssetsConst/accueil/48.JPG" data-speed="0.5" data-lag="0">
+                            data-background="AssetsConst/accueil/charpente-vue-interieure.webp" data-speed="0.5" data-lag="0">
                         </div>
                     </div>
                 </div>
 
-                <!-- ==================== End Numbers ==================== -->
-
-
 
                 <!-- ==================== Start Testimonials ==================== -->
 
-                <section class="testim-style3" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
-                    <style>
-                        /* Remove all shine/glow effects on testim logos */
-                        .testim-style3 .fit-img img,
-                        .testim-style3 .fit-img img:hover {
-                            filter: none !important;
-                            opacity: 1 !important;
-                            box-shadow: none !important;
-                            transition: none !important;
-                        }
-                        .testim-style3 .fit-img::before,
-                        .testim-style3 .fit-img::after {
-                            display: none !important;
-                        }
-                        .testim-style3 .info .fit-img {
-                            filter: none !important;
-                            box-shadow: none !important;
-                        }
-                    </style>
+                <section class="section-flush-bottom testim-style3">
                     <div class="container">
                         <div class="sec-head tobotm" data-ui-animate data-delay="0.2">
                             <h2 class="fs-100 fw-300">"Ce que disent <br> nos partenaires."</h2>
@@ -1125,7 +997,7 @@
                                             <div class="info d-flex justify-content-between">
                                                 <div class="d-flex align-items-center">
                                                     <div class="fit-img h-80px w-80px border-radius-50 o-hidden">
-                                                        <img src="AssetsConst/logo/Partenaires/toglogo.jpg" alt="">
+                                                        <img src="AssetsConst/logo/partenaires/toguna-fond.webp" alt="Toguna">
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-center"></div>
@@ -1148,7 +1020,7 @@
                                             <div class="info d-flex justify-content-between">
                                                 <div class="d-flex align-items-center">
                                                     <div class="fit-img h-80px w-80px border-radius-50 o-hidden">
-                                                        <img src="AssetsConst/logo/Partenaires/B2Goldfond.JPG" alt="">
+                                                        <img src="AssetsConst/logo/partenaires/b2gold-fond.webp" alt="B2Gold">
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-center"></div>
@@ -1171,7 +1043,7 @@
                                             <div class="info d-flex justify-content-between">
                                                 <div class="d-flex align-items-center">
                                                     <div class="fit-img h-80px w-80px border-radius-50 o-hidden">
-                                                        <img src="AssetsConst/logo/Partenaires/AGL.jpg" alt="">
+                                                        <img src="AssetsConst/logo/partenaires/agl-fond.webp" alt="AGL">
                                                     </div>
                                                 </div>
                                                 <div class="d-flex align-items-center"></div>
@@ -1194,41 +1066,12 @@
 
                 <!-- ==================== End Testimonials ==================== -->
 
-                <section class="testim-style1 sub-bg" data-ui-animate data-delay="0.4" style="margin-top: 0 !important; padding-top: 0 !important; margin-bottom: 60px !important;">
-                    <div class="brand-style1 mt-70px position-relative z-index-9" style="margin-top: 150px !important;">
+                <section class="section-flush-top testim-style1 sub-bg" data-ui-animate data-delay="0.4">
+                    <div class="brand-offset brand-style1 mt-70px position-relative z-index-9">
                         <div class="container">
-                            <style>
-                                /* Partner logos: remove white hover and scale up */
-                                .brand-style1 .item img {
-                                    transform: scale(1);
-                                    transform-origin: center center;
-                                    transition: none !important;
-                                    filter: none !important;
-                                    opacity: 1 !important;
-                                }
-                                @media (min-width: 992px) {
-                                    .brand-style1 .item img {
-                                        transform: scale(2);
-                                    }
-                                }
-                                .brand-style1 .item img:hover {
-                                    transform: scale(1);
-                                    filter: none !important;
-                                    opacity: 1 !important;
-                                }
-                                @media (min-width: 992px) {
-                                    .brand-style1 .item img:hover {
-                                        transform: scale(2);
-                                    }
-                                }
-                                .brand-style1 .item a,
-                                .brand-style1 .item a:hover {
-                                    background: transparent !important;
-                                }
-                            </style>
                             <div class="row justify-content-center">
                                 <div class="col-lg-5">
-                                    <div class="text-align-center" style="margin-bottom: 70px;">
+                                    <div class="partners-intro text-align-center">
                                         <span class="butn-bord-sm mb-15px">Nos partenaires</span>
                                         <h2 class="fs-60">Nos partenaires</h2>
                                     </div>
@@ -1237,17 +1080,17 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-2 col-md-4 col-6">
                                     <div class="item text-align-center">
-                                        <a href="#0"><img src="AssetsConst/logo/Partenaires/Logo-B2Gold.png" alt=""></a>
+                                        <a href="#0"><img src="AssetsConst/logo/partenaires/b2gold.webp" alt="B2Gold"></a>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-4 col-6">
                                     <div class="item text-align-center">
-                                        <a href="#0"><img src="AssetsConst/logo/Partenaires/Tmclogo.png" alt=""></a>
+                                        <a href="#0"><img src="AssetsConst/logo/partenaires/toguna.webp" alt="Toguna"></a>
                                     </div>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-6">
                                     <div class="item text-align-center">
-                                        <a href="#0"><img src="AssetsConst/logo/Partenaires/logosup.png" alt=""></a>
+                                        <a href="#0"><img src="AssetsConst/logo/partenaires/partenaire-sup.webp" alt="Partenaire de GDA Construction"></a>
                                     </div>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center md-order-2 d-none d-md-flex">
@@ -1257,17 +1100,13 @@
                                 </div>
                                 <div class="col-lg-3 col-md-4 col-6 md-order-1">
                                     <div class="item text-align-center">
-                                        <a href="#0"><img src="AssetsConst/logo/Partenaires/LOGO AGL.png" alt=""></a>
+                                        <a href="#0"><img src="AssetsConst/logo/partenaires/agl.webp" alt="AGL"></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
-
-
-
 
 
                 <!-- ==================== Start Footer ==================== -->
@@ -1373,31 +1212,6 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
-    <!-- jQuery -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-3.4.0.min.js"></script>
-
-    <!-- plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/ScrollSmoother.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/smoother-script.js"></script>
-    <script src="assets/js/springer.min.js"></script>
-
-    <!-- custom scripts -->
-    <script src="assets/js/scripts.js"></script>
 
 </body>
 

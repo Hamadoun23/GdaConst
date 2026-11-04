@@ -1,98 +1,36 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="fr">
 
 <head>
-
-    <!-- Metas -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="GDA Construction, réalisations construction, projets BTP Mali, ouvrages béton, structures métalliques, bassins hydrauliques, portfolio construction">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nos réalisations | GDA Construction</title>
     <meta name="description" content="Découvrez les réalisations de GDA Construction : ouvrages en béton armé, structures métalliques, bassins de rétention et projets de génie civil au Mali.">
+    <meta name="keywords" content="GDA Construction, réalisations construction, projets BTP Mali, ouvrages béton, structures métalliques, bassins hydrauliques, portfolio construction">
     <meta name="author" content="GDA Construction">
+    <meta name="theme-color" content="#161616">
 
-    <!-- Title  -->
-    <title>GDA Construction</title>
+    <link rel="icon" type="image/png" href="AssetsConst/logo/favicon.png">
+    <link rel="apple-touch-icon" href="AssetsConst/logo/favicon.png">
 
-    <!-- favicon icon -->
-    <link rel="shortcut icon" href="AssetsConst/logo/Const fond blanc.jpg">
-    <link rel="apple-touch-icon" href="AssetsConst/logo/Const fond blanc.jpg">
-    <link rel="android-chrome" sizes="192x192" href="AssetsConst/logo/Const fond blanc.jpg">
-    <link rel="favicon" sizes="32x32" href="AssetsConst/logo/Const fond blanc.jpg">
+    <link rel="preload" href="assets/fonts/funnel-display.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="AssetsConst/fond/motif-noir.webp" as="image" type="image/webp">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/vendor.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/site.css">
 
-    <!-- Plugins -->
-    <link rel="stylesheet" href="assets/css/plugins.css">
-
-    <!-- Core Style Css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Custom Background Style for Design Studio -->
-    <style>
-        body.design-studio {
-            position: relative;
-        }
-        
-        .global-bg {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            background-image: url('AssetsConst/Bgnoir.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            transform: translateZ(0);
-            will-change: transform;
-            pointer-events: none;
-        }
-        
-        .loader-wrap .load-text {
-            background-image: url('AssetsConst/Bgnoir.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 200px;
-        }
-        
-        @media (max-width: 768px) {
-            .loader-wrap .load-text {
-                background-attachment: scroll !important;
-                background-position: center !important;
-                background-size: cover !important;
-                background-repeat: no-repeat !important;
-            }
-            
-            .global-bg {
-                background-attachment: scroll !important;
-                background-position: center !important;
-                background-size: cover !important;
-                background-repeat: no-repeat !important;
-            }
-        }
-    </style>
-
+    <script src="assets/js/vendor/gsap.min.js" defer></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="assets/js/vendor/ScrollSmoother.min.js" defer></script>
+    <script src="assets/js/vendor/isotope.pkgd.min.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </head>
 
 <body class="design-studio">
 
     <div class="global-bg"></div>
-
 
 
     <!-- ==================== Start Loading ==================== -->
@@ -133,22 +71,12 @@
 
     <!-- ==================== Start progress-scroll-button ==================== -->
 
-    <style>
-        @media (max-width: 767.98px) {
-            .progress-wrap {
-                display: flex !important;
-            }
-        }
-    </style>
 
     <div class="progress-wrap cursor-pointer">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
-
-    <!-- ==================== End progress-scroll-button ==================== -->
-
 
 
     <!-- ==================== Start Navbar ==================== -->
@@ -157,8 +85,8 @@
         <div class="container align-items-center">
 
             <!-- Logo -->
-            <a class="logo w-200px" href="#">
-                <img src="AssetsConst/logo/GDA CONST.png" alt="logo">
+            <a class="logo w-200px" href="index.html">
+                <img src="AssetsConst/logo/gda-construction.webp" alt="GDA Construction">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -200,7 +128,6 @@
             <main class="o-hidden">
 
 
-
                 <!-- ==================== Start Portfolio ==================== -->
 
                 <section class="portfolio-style2">
@@ -215,7 +142,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/immb1.jpg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/coulage-beton-toupie.webp" srcset="AssetsConst/realisation/coulage-beton-toupie-800.webp 800w, AssetsConst/realisation/coulage-beton-toupie.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Coulage du béton depuis un camion toupie sur un ferraillage" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -228,7 +155,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/SM1.jpg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/structure-metallique-grande-portee.webp" srcset="AssetsConst/realisation/structure-metallique-grande-portee-800.webp 800w, AssetsConst/realisation/structure-metallique-grande-portee.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Structure métallique en cours de montage" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -241,7 +168,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/bassin1.jpg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/coffrage-bassin.webp" srcset="AssetsConst/realisation/coffrage-bassin-800.webp 800w, AssetsConst/realisation/coffrage-bassin.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Coffrage et étaiement d'un bassin en béton" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -254,7 +181,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/geni1.jpg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/ferraillage-radier.webp" srcset="AssetsConst/realisation/ferraillage-radier-800.webp 800w, AssetsConst/realisation/ferraillage-radier.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Technicien GDA contrôlant un ferraillage" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -267,7 +194,163 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/accueil/villa1.jpeg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/batiment-livre-angle.webp" srcset="AssetsConst/realisation/batiment-livre-angle-800.webp 800w, AssetsConst/realisation/batiment-livre-angle.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Bâtiment à charpente métallique livré" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Bâtiment</span></div>
+                                        <h5>Bâtiment à charpente métallique livré</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/coulage-massifs.webp" srcset="AssetsConst/realisation/coulage-massifs-800.webp 800w, AssetsConst/realisation/coulage-massifs.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Équipe GDA coulant des massifs de fondation" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Fondations</span></div>
+                                        <h5>Fondations et gros œuvre</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/montage-charpente-grue.webp" srcset="AssetsConst/realisation/montage-charpente-grue-800.webp 800w, AssetsConst/realisation/montage-charpente-grue.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Montage d'une charpente métallique à la grue" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Métal</span></div>
+                                        <h5>Montage de charpente à la grue</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/soudure-charpente-detail.webp" srcset="AssetsConst/realisation/soudure-charpente-detail-800.webp 800w, AssetsConst/realisation/soudure-charpente-detail.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="Soudeur GDA assemblant des éléments de charpente" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Métal</span></div>
+                                        <h5>Soudure des éléments de charpente</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/reglage-beton.webp" srcset="AssetsConst/realisation/reglage-beton-800.webp 800w, AssetsConst/realisation/reglage-beton.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Technicien GDA réglant le béton frais" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Béton</span></div>
+                                        <h5>Mise en œuvre du béton de fondation</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/massif-fondation.webp" srcset="AssetsConst/realisation/massif-fondation-800.webp 800w, AssetsConst/realisation/massif-fondation.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="Équipe GDA en train de coffrer un massif de fondation" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Fondations</span></div>
+                                        <h5>Coffrage de massifs de fondation</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/betonnage-benne.webp" srcset="AssetsConst/realisation/betonnage-benne-800.webp 800w, AssetsConst/realisation/betonnage-benne.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="Bétonnage à la benne d'un ouvrage coffré" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Génie</span></div>
+                                        <h5>Bétonnage à la benne</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/equipe-gda-construction.webp" srcset="AssetsConst/realisation/equipe-gda-construction-800.webp 800w, AssetsConst/realisation/equipe-gda-construction.webp 1920w" sizes="(max-width: 991px) 270px, 50vw" alt="Équipe GDA Construction en tenue sur le chantier" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Équipe</span></div>
+                                        <h5>Nos équipes sur le terrain</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/ouvrage-beton-arme.webp" srcset="AssetsConst/realisation/ouvrage-beton-arme-800.webp 800w, AssetsConst/realisation/ouvrage-beton-arme.webp 908w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Béton</span></div>
+                                        <h5>Ouvrage en béton armé</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/charpente-verte.webp" srcset="AssetsConst/realisation/charpente-verte-800.webp 800w, AssetsConst/realisation/charpente-verte.webp 950w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Métal</span></div>
+                                        <h5>Structure métallique à haute portée</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/bassin-etaiement.webp" srcset="AssetsConst/realisation/bassin-etaiement-800.webp 800w, AssetsConst/realisation/bassin-etaiement.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Génie</span></div>
+                                        <h5>Rétention d'eau bétonnée haute capacité</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/coulage-radier.webp" srcset="AssetsConst/realisation/coulage-radier-800.webp 800w, AssetsConst/realisation/coulage-radier.webp 1210w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
+                                            data-lag="0">
+                                    </div>
+                                    <div class="cont mt-20px">
+                                        <div class="mb-10px opacity-7 fs-14 text-uppercase"><span></span><span
+                                                class="ml-15px mr-10px">.</span><span>Design</span></div>
+                                        <h5>Génie Civil</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
+                                <div class="item mt-80px">
+                                    <div class="fit-img h-500px border-radius-30px o-hidden">
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/villa-moderne.webp" srcset="AssetsConst/realisation/villa-moderne-800.webp 800w, AssetsConst/realisation/villa-moderne.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -280,7 +363,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/SM2.jpg" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/escalier-metallique.webp" srcset="AssetsConst/realisation/escalier-metallique-800.webp 800w, AssetsConst/realisation/escalier-metallique.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -293,7 +376,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/1.JPG" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/radier-ferraille.webp" srcset="AssetsConst/realisation/radier-ferraille-800.webp 800w, AssetsConst/realisation/radier-ferraille.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -306,7 +389,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/2.JPG" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/engins-compactage.webp" srcset="AssetsConst/realisation/engins-compactage-800.webp 800w, AssetsConst/realisation/engins-compactage.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -319,7 +402,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/3.JPG" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/niveleuse-chantier.webp" srcset="AssetsConst/realisation/niveleuse-chantier-800.webp 800w, AssetsConst/realisation/niveleuse-chantier.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -332,7 +415,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/4.JPG" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/compacteur-controle.webp" srcset="AssetsConst/realisation/compacteur-controle-800.webp 800w, AssetsConst/realisation/compacteur-controle.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -345,7 +428,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/5.JPG" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/controle-charpente.webp" srcset="AssetsConst/realisation/controle-charpente-800.webp 800w, AssetsConst/realisation/controle-charpente.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -358,7 +441,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/6.JPG" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/soudure-ferraillage.webp" srcset="AssetsConst/realisation/soudure-ferraillage-800.webp 800w, AssetsConst/realisation/soudure-ferraillage.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -371,7 +454,7 @@
                             <div class="col-lg-6 items" data-ui-animate data-delay="0.2">
                                 <div class="item mt-80px">
                                     <div class="fit-img h-500px border-radius-30px o-hidden">
-                                        <img src="AssetsConst/realisation/7.JPG" alt="" class="h-620px" data-speed="0.8"
+                                        <img loading="lazy" decoding="async" src="AssetsConst/realisation/compacteur-site.webp" srcset="AssetsConst/realisation/compacteur-site-800.webp 800w, AssetsConst/realisation/compacteur-site.webp 1400w" sizes="(max-width: 991px) 270px, 50vw" alt="" class="h-620px" data-speed="0.8"
                                             data-lag="0">
                                     </div>
                                     <div class="cont mt-20px">
@@ -384,9 +467,6 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- ==================== End Portfolio ==================== -->
-
 
 
                 <!-- ==================== Start Footer ==================== -->
@@ -490,30 +570,6 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
-    <!-- jQuery -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-3.4.0.min.js"></script>
-
-    <!-- plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/ScrollSmoother.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/smoother-script.js"></script>
-
-    <!-- custom scripts -->
-    <script src="assets/js/scripts.js"></script>
 
 </body>
 

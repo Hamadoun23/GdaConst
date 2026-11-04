@@ -1,0 +1,305 @@
+/* ==========================================================================
+   GDA Construction - styles propres au site.
+   À charger après vendor.min.css et theme.css : c'est ici qu'on personnalise.
+   ========================================================================== */
+
+/* Polices hébergées sur le site
+   ========================================================================== */
+
+@font-face {
+    font-family: "Funnel Display";
+    src: url("../fonts/funnel-display.woff2") format("woff2");
+    font-weight: 300 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mona Sans";
+    src: url("../fonts/mona-sans.woff2") format("woff2");
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Font Awesome 6 Free";
+    src: url("../fonts/fa-solid-subset.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    src: url("../fonts/fa-solid-subset.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Font Awesome 6 Brands";
+    src: url("../fonts/fa-brands-subset.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* Fond du site et écran de chargement
+   ========================================================================== */
+
+body.design-studio {
+    position: relative;
+}
+
+.global-bg,
+.loader-wrap .load-text {
+    background-image: url("../../AssetsConst/fond/motif-noir.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.global-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    transform: translateZ(0);
+    pointer-events: none;
+}
+
+.loader-wrap .load-text {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 200px;
+}
+
+
+/* Navigation
+   ==========================================================================
+   Au-dessus des légendes du diaporama d'accueil, qui ont aussi z-index: 99. */
+
+.navbar {
+    z-index: 100;
+}
+
+
+/* Curseur et effets
+   ========================================================================== */
+
+/* Le curseur se déplace avec `translate` pour éviter de recalculer la mise en page. */
+.cursor {
+    left: 0;
+    top: 0;
+}
+
+/* Le flou d'arrière-plan fait chuter la fluidité sur téléphone et tablette. */
+@media (max-width: 991.98px) {
+    body .blur-div {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body:not(:has(.parallax-sliders)) .progress-wrap {
+        display: flex !important;
+    }
+}
+
+
+/* Composants partagés
+   ========================================================================== */
+
+.u-color-white {
+    color: #ffffff !important;
+}
+
+.u-color-orange {
+    color: #FF6A3A !important;
+}
+
+.u-color-black {
+    color: #000000;
+}
+
+.u-fw-700 {
+    font-weight: 700 !important;
+}
+
+.u-icon-x2 {
+    transform: scale(2);
+    transform-origin: center;
+}
+
+.u-flex-fill {
+    flex: 1 1 auto;
+}
+
+.butn-arrow.btn-orange {
+    background-color: #FF6A3A;
+    color: #ffffff;
+}
+
+.butn-arrow.btn-orange .text-uppercase,
+.butn-arrow.btn-orange .arrow-icon {
+    color: #ffffff;
+}
+
+.link-plain {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Accueil et expertises
+   ========================================================================== */
+
+.serv-style4 .item:first-of-type {
+    padding-top: 30px !important;
+}
+
+.serv-style4 .item:first-of-type .img {
+    margin-top: -50px !important;
+    transform: translateY(-30px);
+}
+
+.serv-style4 .item:first-of-type .img img {
+    transform: translateY(-30px);
+}
+
+
+/* Accueil
+   ========================================================================== */
+
+.section-flush-bottom {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.section-flush-top {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 60px !important;
+}
+
+.brand-style1.brand-offset {
+    margin-top: 150px !important;
+}
+
+.partners-intro {
+    margin-bottom: 70px;
+}
+
+.testim-style3 .fit-img img,
+.testim-style3 .fit-img img:hover {
+    filter: none !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+    transition: none !important;
+}
+
+.testim-style3 .fit-img::before,
+.testim-style3 .fit-img::after {
+    display: none !important;
+}
+
+.testim-style3 .info .fit-img {
+    filter: none !important;
+    box-shadow: none !important;
+}
+
+/* Hauteur réservée : Swiper n'arrive qu'à l'approche de la section. */
+@media (min-width: 992px) {
+    .testim-style3 .swiper-container {
+        min-height: 500px;
+    }
+}
+
+/* Logos partenaires : agrandis sur grand écran, sans effet au survol. */
+.brand-style1 .item img {
+    transform: scale(1);
+    transform-origin: center center;
+    transition: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+.brand-style1 .item a,
+.brand-style1 .item a:hover {
+    background: transparent !important;
+}
+
+@media (min-width: 992px) {
+    .brand-style1 .item img,
+    .brand-style1 .item img:hover {
+        transform: scale(2);
+    }
+}
+
+
+/* Expertises
+   ========================================================================== */
+
+.features-offset {
+    margin-top: 70px;
+}
+
+.card-light {
+    background: #ffffff !important;
+    color: #b26440;
+}
+
+.tags a:hover {
+    background-color: #FF6A3A !important;
+    color: #ffffff !important;
+    border-color: #FF6A3A !important;
+}
+
+.hr-sec .cont .tags span {
+    background-color: #FF6A3A !important;
+    color: #ffffff !important;
+    border-color: #FF6A3A !important;
+}
+
+
+/* Portfolio
+   ========================================================================== */
+
+.parallax-card {
+    background-color: #FF6A3A;
+    padding: 40px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.parallax-card button {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-card-link {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+}
