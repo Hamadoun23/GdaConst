@@ -95,6 +95,12 @@ body.design-studio {
 }
 
 
+/* Scène du diaporama d'accueil : sans effet sur grand écran, collante sur écran tactile. */
+.snap-stage {
+    display: contents;
+}
+
+
 /* Curseur et effets
    ========================================================================== */
 
@@ -308,21 +314,38 @@ body.design-studio {
         display: none;
     }
 
-    /* Accueil : fondu automatique sur un écran, sans dépendre du défilement. */
-    .hero-style5 .ui-snap-slider,
-    .hero-style5 .snap-slider-images-wrapper,
-    .hero-style5 .snap-slider-captions,
-    .snap-slider-thumbs {
-        height: 100vh;
-        height: 100svh;
+    /* Le contenu de page ne doit pas devenir un cadre de défilement : position: sticky s'y bloquerait. */
+    main.o-hidden,
+    .hero-style5.o-hidden {
+        overflow: clip;
     }
 
+    /* Accueil : la scène reste à l'écran pendant trois hauteurs de défilement.
+       lvh couvre l'écran barre Safari repliée ; svh garde légende et ovale visibles barre dépliée. */
     .hero-style5 .ui-snap-slider {
+        height: 300vh;
+        height: 300lvh;
+    }
+
+    .snap-stage {
+        display: block;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        height: 100lvh;
         overflow: hidden;
     }
 
     .hero-style5 .snap-slider-images-wrapper {
         position: relative;
+        height: 100vh;
+        height: 100lvh;
+    }
+
+    .hero-style5 .snap-slider-captions,
+    .snap-slider-thumbs {
+        height: 100vh;
+        height: 100svh;
     }
 
     .snap-slide,
@@ -330,8 +353,6 @@ body.design-studio {
     .hero-style5 .snap-slide-caption {
         position: absolute;
         inset: 0;
-        opacity: 0;
-        transition: opacity 0.8s ease;
     }
 
     .snap-slide {
@@ -342,31 +363,18 @@ body.design-studio {
         padding-inline: 16px;
     }
 
-    .snap-slide.is-active,
-    .thumb-slide.is-active,
-    .hero-style5 .snap-slide-caption.is-active {
-        opacity: 1;
-    }
-
-    /* Portfolio : glissement horizontal natif. */
+    /* Portfolio : la galerie reste à l'écran et le défilement vertical la fait avancer. */
     .parallax-slider-wrapper {
+        position: sticky;
         height: 100vh;
         height: 100svh;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scroll-snap-type: x mandatory;
-        overscroll-behavior-x: contain;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .parallax-slider-wrapper::-webkit-scrollbar {
-        display: none;
+        overflow: hidden;
     }
 
     .parallax-slider-wrapper .parallax-sliders {
         position: relative;
         width: max-content;
+        will-change: transform;
     }
 
     .parallax-slider-wrapper .parallax-slider-inner {
@@ -378,10 +386,11 @@ body.design-studio {
         transform: none;
     }
 
+    /* width et flex-basis : Safari calcule la largeur de la galerie à partir de width. */
     .parallax-slider-wrapper .parallax-item {
-        flex: 0 0 min(82vw, 500px);
+        flex: 0 0 auto;
+        width: min(82vw, 500px);
         border-radius: 30px;
-        scroll-snap-align: center;
     }
 
     .parallax-slider-wrapper .parallax-img {

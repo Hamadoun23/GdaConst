@@ -14,7 +14,6 @@
     const NAVBAR_SCROLL_OFFSET = 300;
     const BACK_TO_TOP_OFFSET = 150;
     const SCROLL_SMOOTHING = 1;
-    const HERO_SLIDE_DURATION = 5000;
     const TOUCH_LAYOUT = '(max-width: 991.98px), (hover: none)'; // À garder identique dans site.css.
 
     const qs = (selector, root = document) => root.querySelector(selector);
@@ -28,7 +27,7 @@
     /* ---------------------------- Défilement ---------------------------- */
 
     function initSmoothScroll() {
-        if (!window.ScrollSmoother || !qs('#smooth-wrapper')) return;
+        if (!window.ScrollSmoother || !qs('#smooth-wrapper') || useTouchLayout()) return;
         smoother = ScrollSmoother.create({ smooth: SCROLL_SMOOTHING, effects: true });
     }
 
@@ -181,19 +180,34 @@
 
     /* ------------------------------ Accueil ----------------------------- */
 
-    /** Diaporama sur écran tactile : image, vignette et titre changent ensemble, en fondu. */
-    function playHeroFade(layers) {
-        let current = 0;
-
-        const show = (index) => layers.forEach((layer) => {
-            layer.forEach((element, position) => element.classList.toggle('is-active', position === index));
+    /** Diaporama tactile : la scène reste à l'écran (site.css), le défilement fait monter l'image suivante. */
+    function scrubTouchHero(holder, slides, thumbs, captions) {
+        const lastSlideIndex = slides.length - 1;
+        const timeline = gsap.timeline({
+            defaults: { ease: 'none' },
+            scrollTrigger: {
+                trigger: holder,
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: true,
+                snap: {
+                    snapTo: 1 / lastSlideIndex,
+                    inertia: false, // Un geste rapide ne doit pas sauter une image.
+                    duration: { min: 0.2, max: 0.5 },
+                    ease: 'power2.inOut',
+                },
+            },
         });
 
-        show(current);
-        window.setInterval(() => {
-            current = (current + 1) % layers[0].length;
-            show(current);
-        }, HERO_SLIDE_DURATION);
+        for (let index = 1; index <= lastSlideIndex; index += 1) {
+            const position = index - 1;
+
+            timeline
+                .fromTo(slides[index], { yPercent: 100 }, { yPercent: 0, duration: 1 }, position)
+                .fromTo(thumbs[index], { yPercent: 100 }, { yPercent: 0, duration: 1 }, position)
+                .to(captions[index - 1], { autoAlpha: 0, duration: 0.4 }, position)
+                .fromTo(captions[index], { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4 }, position + 0.6);
+        }
     }
 
     /** Diaporama plein écran : images, vignettes et titres synchronisés au défilement. */
@@ -206,7 +220,7 @@
         const thumbs = gsap.utils.toArray('.thumb-slide');
 
         if (useTouchLayout()) {
-            playHeroFade([slides, thumbs, captions]);
+            scrubTouchHero(holder, slides, thumbs, captions);
             return;
         }
 
@@ -374,29 +388,41 @@
     /** Galerie horizontale pilotée par le défilement ; l'animation s'arrête dès que tout est immobile. */
     function initPortfolioSlider() {
         const slider = qs('.parallax-sliders');
-        if (!slider || useTouchLayout()) return; // Sur écran tactile, site.css gère un glissement natif.
+        if (!slider) return;
 
+        const isTouch = useTouchLayout();
+        const scrollTrack = isTouch ? qs('main') : document.body;
         const images = qsa('.parallax-img');
-        const easing = 0.05;
+        const easing = isTouch ? 1 : 0.05;
         let current = 0;
+        let sliderWidth = 0;
         let imageWidth = 1;
         let isRunning = false;
 
         const measure = () => {
-            const sliderWidth = slider.getBoundingClientRect().width;
+            sliderWidth = slider.getBoundingClientRect().width;
             imageWidth = sliderWidth / images.length;
-            document.body.style.height = `${sliderWidth - (window.innerWidth - window.innerHeight)}px`;
+            scrollTrack.style.height = `${sliderWidth - (window.innerWidth - window.innerHeight)}px`;
+        };
+
+        /** Sur tactile, la barre de Safari change la hauteur : on part de la progression, pas des pixels. */
+        const targetOffset = () => {
+            if (!isTouch) return window.scrollY;
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            return (window.scrollY / scrollable) * (sliderWidth - window.innerWidth);
         };
 
         const render = () => {
-            const target = window.scrollY;
+            const target = targetOffset();
             current += (target - current) * easing;
-
-            const ratio = current / imageWidth;
             slider.style.transform = `translateX(-${current.toFixed(2)}px)`;
-            images.forEach((image, index) => {
-                image.style.transform = `translateX(${(ratio - index * 0.7) * 100}px)`;
-            });
+
+            if (!isTouch) {
+                const ratio = current / imageWidth;
+                images.forEach((image, index) => {
+                    image.style.transform = `translateX(${(ratio - index * 0.7) * 100}px)`;
+                });
+            }
 
             isRunning = Math.abs(target - current) > 0.5;
             if (isRunning) requestAnimationFrame(render);

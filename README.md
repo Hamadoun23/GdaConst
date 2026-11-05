@@ -41,7 +41,7 @@ Refonte du code terminée le 04/11/2026. Rien n'a été mis en ligne ni enregist
 - Écran de chargement raccourci, flou des animations retiré, défilement moins lourd.
 - Bugs corrigés : menu mobile bloqué sur l'accueil, minuteurs sans fin au survol de l'équipe,
   animations en panne sur certaines pages, 19 liens cassés vers `project-details.html`.
-- Mobile : diaporama d'accueil en fondu, portfolio au glissement natif, photos au format d'origine.
+- Mobile : diaporama et portfolio pilotés par le défilement (`position: sticky`), photos au format d'origine.
 - Formulaire de contact et `contact.php` retirés : le site ne dépend plus d'aucun serveur PHP.
 
 ### Dernier contrôle
