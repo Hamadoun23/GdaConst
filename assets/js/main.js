@@ -14,10 +14,13 @@
     const NAVBAR_SCROLL_OFFSET = 300;
     const BACK_TO_TOP_OFFSET = 150;
     const SCROLL_SMOOTHING = 1;
+    const HERO_SLIDE_DURATION = 5000;
+    const TOUCH_LAYOUT = '(max-width: 991.98px), (hover: none)'; // À garder identique dans site.css.
 
     const qs = (selector, root = document) => root.querySelector(selector);
     const qsa = (selector, root = document) => [...root.querySelectorAll(selector)];
     const isDesktop = () => window.innerWidth > DESKTOP_MIN_WIDTH;
+    const useTouchLayout = () => window.matchMedia(TOUCH_LAYOUT).matches;
 
     let smoother = null;
 
@@ -111,7 +114,7 @@
         }
     }
 
-    /** Images de fond : chargées à l'approche de l'écran ; celles du survol, après la page. */
+    /** Images de fond : chargées à l'approche de l'écran ; survol et galerie horizontale, après la page. */
     function initBackgrounds() {
         const applyBackground = (element) => {
             element.style.backgroundImage = `url("${element.dataset.background}")`;
@@ -125,10 +128,10 @@
         }, { rootMargin: '100% 100%' });
 
         const elements = qsa('[data-background]');
-        const hoverImages = elements.filter((element) => element.classList.contains('award-reveal-img'));
+        const afterLoad = elements.filter((element) => element.matches('.award-reveal-img, .parallax-img'));
 
-        elements.filter((element) => !hoverImages.includes(element)).forEach((element) => observer.observe(element));
-        window.addEventListener('load', () => hoverImages.forEach(applyBackground));
+        elements.filter((element) => !afterLoad.includes(element)).forEach((element) => observer.observe(element));
+        window.addEventListener('load', () => afterLoad.forEach(applyBackground));
     }
 
 
@@ -178,16 +181,37 @@
 
     /* ------------------------------ Accueil ----------------------------- */
 
+    /** Diaporama sur écran tactile : image, vignette et titre changent ensemble, en fondu. */
+    function playHeroFade(layers) {
+        let current = 0;
+
+        const show = (index) => layers.forEach((layer) => {
+            layer.forEach((element, position) => element.classList.toggle('is-active', position === index));
+        });
+
+        show(current);
+        window.setInterval(() => {
+            current = (current + 1) % layers[0].length;
+            show(current);
+        }, HERO_SLIDE_DURATION);
+    }
+
     /** Diaporama plein écran : images, vignettes et titres synchronisés au défilement. */
     function initSnapSlider() {
         const holder = qs('.ui-snap-slider');
         if (!holder) return;
 
         const slides = gsap.utils.toArray('.snap-slide');
-        const thumbsWrapper = qs('.snap-slider-thumbs');
-        const captionsWrapper = qs('.snap-slider-captions');
         const captions = gsap.utils.toArray('.snap-slide-caption');
         const thumbs = gsap.utils.toArray('.thumb-slide');
+
+        if (useTouchLayout()) {
+            playHeroFade([slides, thumbs, captions]);
+            return;
+        }
+
+        const thumbsWrapper = qs('.snap-slider-thumbs');
+        const captionsWrapper = qs('.snap-slider-captions');
         const thumbImages = gsap.utils.toArray('.thumb-slide img');
         const viewportHeight = window.innerHeight;
         const lastSlideIndex = slides.length - 1;
@@ -350,7 +374,7 @@
     /** Galerie horizontale pilotée par le défilement ; l'animation s'arrête dès que tout est immobile. */
     function initPortfolioSlider() {
         const slider = qs('.parallax-sliders');
-        if (!slider) return;
+        if (!slider || useTouchLayout()) return; // Sur écran tactile, site.css gère un glissement natif.
 
         const images = qsa('.parallax-img');
         const easing = 0.05;

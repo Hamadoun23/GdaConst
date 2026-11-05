@@ -104,13 +104,6 @@ body.design-studio {
     top: 0;
 }
 
-/* Le flou d'arrière-plan fait chuter la fluidité sur téléphone et tablette. */
-@media (max-width: 991.98px) {
-    body .blur-div {
-        display: none;
-    }
-}
-
 @media (max-width: 767.98px) {
     body:not(:has(.parallax-sliders)) .progress-wrap {
         display: flex !important;
@@ -302,4 +295,133 @@ body.design-studio {
     display: block;
     text-decoration: none;
     height: 100%;
+}
+
+
+/* Écrans tactiles et étroits
+   ==========================================================================
+   Doit rester synchronisé avec TOUCH_LAYOUT dans main.js. */
+
+@media (max-width: 991.98px), (hover: none) {
+    /* Le flou d'arrière-plan fait chuter la fluidité sur téléphone et tablette. */
+    body .blur-div {
+        display: none;
+    }
+
+    /* Accueil : fondu automatique sur un écran, sans dépendre du défilement. */
+    .hero-style5 .ui-snap-slider,
+    .hero-style5 .snap-slider-images-wrapper,
+    .hero-style5 .snap-slider-captions,
+    .snap-slider-thumbs {
+        height: 100vh;
+        height: 100svh;
+    }
+
+    .hero-style5 .ui-snap-slider {
+        overflow: hidden;
+    }
+
+    .hero-style5 .snap-slider-images-wrapper {
+        position: relative;
+    }
+
+    .snap-slide,
+    .thumb-slide,
+    .hero-style5 .snap-slide-caption {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+    }
+
+    .snap-slide {
+        height: 100%;
+    }
+
+    .hero-style5 .snap-slide-caption {
+        padding-inline: 16px;
+    }
+
+    .snap-slide.is-active,
+    .thumb-slide.is-active,
+    .hero-style5 .snap-slide-caption.is-active {
+        opacity: 1;
+    }
+
+    /* Portfolio : glissement horizontal natif. */
+    .parallax-slider-wrapper {
+        height: 100vh;
+        height: 100svh;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .parallax-slider-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .parallax-slider-wrapper .parallax-sliders {
+        position: relative;
+        width: max-content;
+    }
+
+    .parallax-slider-wrapper .parallax-slider-inner {
+        position: relative;
+        top: 10%;
+        left: 0;
+        width: max-content;
+        padding-inline: 9vw;
+        transform: none;
+    }
+
+    .parallax-slider-wrapper .parallax-item {
+        flex: 0 0 min(82vw, 500px);
+        border-radius: 30px;
+        scroll-snap-align: center;
+    }
+
+    .parallax-slider-wrapper .parallax-img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .parallax-card button {
+        font-size: 160px;
+    }
+}
+
+/* Photos au format d'origine : un cadre vertical n'en montrerait que le centre. */
+@media (max-width: 991.98px) {
+    .portfolio-style2 .item {
+        min-height: 0;
+    }
+
+    .portfolio-style2 .item .fit-img.h-500px {
+        height: auto !important;
+        aspect-ratio: 3 / 2;
+    }
+
+    .portfolio-style2 .item .fit-img img.h-620px {
+        height: 100% !important;
+    }
+
+    .hr-sec .hr-container .item-panel .fit-img {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    .border-radius-100px.h-700px {
+        height: auto !important;
+        aspect-ratio: 3 / 2;
+        border-radius: 30px;
+    }
+
+    .border-radius-100px.h-700px > .bg-img.h-800px {
+        height: 100% !important;
+    }
 }
